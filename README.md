@@ -12,12 +12,12 @@ For other versions: Make sure you have curl installed by running ```sudo apt-get
 
 First, install the setup (Python + Ansible) by running follwoing command from the terminal.
 
-```
+```bash
 curl -s https://raw.githubusercontent.com/chaosmail/dev-env/master/setup.sh | bash /dev/stdin
 ```
 
 Then, clone this repository to your machine by running following command.
 
-```
+```bash
 mkdir ~/.dev-env && git clone https://github.com/chaosmail/dev-env.git ~/.dev-env
 ```
