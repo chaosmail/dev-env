@@ -27,5 +27,5 @@ mkdir ~/.dev-env && git clone https://github.com/chaosmail/dev-env.git ~/.dev-en
 Finally, you can automatically install and configure all your application with Ansible by running the following command.
 
 ```bash
-sudo ansible-playbook ~/.dev-env/playbook.yml -i ~/.dev-env/hosts
+ansible-playbook ~/.dev-env/playbook.yml -i ~/.dev-env/hosts --ask-sudo-pass
 ```
