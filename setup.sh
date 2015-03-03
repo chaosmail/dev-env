@@ -1,17 +1,21 @@
-# Install Python 2 + 3 (latest)
-sudo apt-add-repository ppa:fkrull/deadsnakes
-sudo apt-get update
-sudo apt-get install-y python2.7 python3.4
-
-# Install Ansible
+# Common Packages
 sudo apt-get install -y software-properties-common
-sudo apt-add-repository ppa:ansible/ansible
+
+# Install Python 2 + 3 (latest)
+# Uncomment following line on Ubuntu < 14.04
+# sudo apt-add-repository ppa:fkrull/deadsnakes
 sudo apt-get update
-sudo apt-get install -y ansible
+sudo apt-get install -y python2.7 python3.4
 
 # Install Git
 sudo apt-get install -y git
 
 # Enable Git Subtree
-sudo chmod +x /usr/share/doc/git/contrib/subtree/git-subtree.sh
-sudo ln -s /usr/share/doc/git/contrib/subtree/git-subtree.sh /usr/lib/git-core/git-subtree
+# Uncomment following lines on Ubuntu < 14.04
+# sudo chmod +x /usr/share/doc/git/contrib/subtree/git-subtree.sh
+# sudo ln -s /usr/share/doc/git/contrib/subtree/git-subtree.sh /usr/lib/git-core/git-subtree
+
+# Install Ansible
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt-get update
+sudo apt-get install -y ansible
