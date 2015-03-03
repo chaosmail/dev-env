@@ -1,0 +1,11 @@
+---
+# Install & Configure Dropbox
+
+- name: Download dropbox
+  get_url: 
+    url="{{ dropbox_url }}"
+    dest="/home/{{ ansible_env.USER }}/Downloads/{{ dropbox_version }}.deb"
+
+- name: Install dropbox
+  apt: deb="/home/{{ ansible_env.USER }}/Downloads/{{ dropbox_version }}.deb"
+  sudo: true

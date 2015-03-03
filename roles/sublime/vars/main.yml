@@ -4,7 +4,7 @@ sublime_version: 3
 
 sublime_ppa: "ppa:webupd8team/sublime-text-{{ sublime_version }}"
 
-sublime_dir: "~/.config/sublime-text-{{ sublime_version }}"
+sublime_dir: "/home/{{ ansible_env.USER }}/.config/sublime-text-{{ sublime_version }}"
 sublime_packages_dir: "{{ sublime_dir }}/Packages"
 sublime_installed_packages_dir: "{{ sublime_dir }}/Installed Packages"
 

@@ -1,0 +1,5 @@
+---
+
+dropbox_version: dropbox_2015.02.12_amd64
+
+dropbox_url: "https://www.dropbox.com/download?dl=packages/ubuntu/{{ dropbox_version }}.deb"

@@ -1,0 +1,11 @@
+---
+# Install & Configure Chromium
+
+- name: Install latest chromium package with codecs
+  apt: pkg="{{ item }}" state=latest
+  with_items:
+    - chromium-browser
+    - chromium-browser-l10n 
+    - chromium-codecs-ffmpeg
+    - chromium-codecs-ffmpeg-extra
+  sudo: true

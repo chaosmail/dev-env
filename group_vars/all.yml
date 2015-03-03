@@ -4,5 +4,6 @@
 sublime_version: 3
 
 sublime_packages:
+    AdvancedNewFile: https://github.com/skuroda/Sublime-AdvancedNewFile.git
     Ansible: https://github.com/clifford-github/sublime-ansible.git
     SublimeLinter: https://github.com/SublimeLinter/SublimeLinter3.git
