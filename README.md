@@ -15,3 +15,9 @@ First, install the setup (Python + Ansible) by running follwoing command from th
 ```
 curl -s https://raw.githubusercontent.com/chaosmail/dev-env/master/setup.sh | bash /dev/stdin
 ```
+
+Then, clone this repository to your machine by running following command.
+
+```
+mkdir ~/.dev-env && git clone https://github.com/chaosmail/dev-env.git ~/.dev-env
+```
