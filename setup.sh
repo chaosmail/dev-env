@@ -1,11 +1,15 @@
+# Update & Upgrade all packages
+supo apt-get update
+supo apt-get upgrade
+
 # Common Packages
 sudo apt-get install -y software-properties-common
 
-# Install Python 2 + 3 (latest)
-# Uncomment following line on Ubuntu < 14.04
+# Install Python 3 (latest)
+# Uncomment following lines on Ubuntu < 14.04
 # sudo apt-add-repository ppa:fkrull/deadsnakes
-sudo apt-get update
-sudo apt-get install -y python2.7 python3.4
+# sudo apt-get update
+# sudo apt-get install -y python3.4
 
 # Install Git
 sudo apt-get install -y git
