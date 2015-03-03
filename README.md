@@ -1,4 +1,4 @@
-# Development environment for NOOBS
+# Development Environment for NOOBS
 
 This repository should help you to quickly setup a clean development environment based on Ubuntu 14.04 on your machine.
 
@@ -22,4 +22,10 @@ Then, clone this repository to your machine by running following command.
 
 ```bash
 mkdir ~/.dev-env && git clone https://github.com/chaosmail/dev-env.git ~/.dev-env
+```
+
+Finally, you can automatically install and configure all your application with Ansible by running the following command.
+
+```bash
+sudo ansible-playbook ~/.dev-env/playbook.yml -i ~/.dev-env/hosts
 ```
