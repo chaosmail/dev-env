@@ -1,0 +1,34 @@
+---
+# Install & Configure Sublime Text
+
+- name: Add sublime repository
+  apt_repository: repo="{{ sublime_ppa }}" state=present
+  sudo: true
+
+- name: Update package manager
+  apt: update_cache=yes
+  sudo: true
+
+- name: Install latest sublime package
+  apt: pkg="{{ item }}" state=latest
+  with_items:
+    - sublime-text-installer
+  sudo: true
+
+
+# Install Package Control
+
+- name: Install package control for sublime
+  get_url: 
+    url="{{ sublime_package_control_url }}/Package%20Control.sublime-package"
+    dest="{{ sublime_installed_packages_dir }}/Package Control.sublime-package"
+
+
+# Install & Configure Sublime Text Packages
+
+- name: Install all custom packages
+  git:
+    repo="{{ item.value }}"
+    dest="{{ sublime_packages_dir }}/{{ item.key }}"
+    accept_hostkey="yes"
+  with_dict: sublime_packages | default({})
