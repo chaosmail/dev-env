@@ -1,0 +1,9 @@
+---
+# Install & Configure Ruby
+
+- name: Install latest ruby package
+  apt: pkg="{{ item }}" state=present force=yes
+  with_items:
+    - ruby
+    - ruby-dev
+  sudo: true

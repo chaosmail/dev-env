@@ -32,10 +32,15 @@ dev-env
 
 At the moment, following packages will be automatically installed and configured:
 
-* sublime (installation, package manager and popular packages)
 * chromium (installation)
-* nautilus (configuration)
-* encfs (installation)
 * dropbox (installation)
+* encfs (installation)
+* jekyll (insallation)
+* nautilus (configuration)
+* nodejs (installation)
+* ruby (installation)
 * skype (installation)
 * spotify (installation)
+* sublime (installation, package manager and popular packages)
+* vagrant (installation)
+* virtualbox (installation)

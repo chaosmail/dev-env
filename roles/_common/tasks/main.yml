@@ -1,0 +1,9 @@
+---
+# Install & Configure Common Tools
+
+- name: Install common tools
+  apt: pkg="{{ item }}" state=present force=yes
+  with_items:
+    - make
+    - gcc
+  sudo: true

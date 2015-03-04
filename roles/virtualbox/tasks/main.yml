@@ -1,0 +1,8 @@
+---
+# Install & Configure Virtualbox
+
+- name: Install latest virtualbox package
+  apt: pkg="{{ item }}" state=present force=yes
+  with_items:
+    - virtualbox
+  sudo: true

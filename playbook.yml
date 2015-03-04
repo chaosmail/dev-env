@@ -2,10 +2,16 @@
   hosts: 127.0.0.1
   connection: local
   roles:
-    - sublime
+    - _common
     - chromium
-    - nautilus
-    - encfs
     - dropbox
+    - encfs
+    - nautilus
+    - nodejs
+    - ruby
     - skype
+    - sublime
     - spotify
+    - vagrant
+    - virtualbox
+    - jekyll
