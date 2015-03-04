@@ -1,11 +1,17 @@
 ---
 # Install & Configure Dropbox
 
+- name: Check if dropbox is installed
+  command: dpkg-query -l dropbox
+  register: dropbox_check
+
 - name: Download dropbox
   get_url: 
     url="{{ dropbox_url }}"
     dest="/home/{{ ansible_env.USER }}/Downloads/{{ dropbox_version }}.deb"
+  when: dropbox_check.stdout.find('no packages found') != -1
 
 - name: Install dropbox
   apt: deb="/home/{{ ansible_env.USER }}/Downloads/{{ dropbox_version }}.deb"
   sudo: true
+  when: dropbox_check.stdout.find('no packages found') != -1
