@@ -1,0 +1,6 @@
+---
+
+packer_version: packer_0.7.5_linux_amd64
+
+packer_url: https://dl.bintray.com/mitchellh/packer/{{ packer_version }}.zip
+packer_dir: /usr/local/packer

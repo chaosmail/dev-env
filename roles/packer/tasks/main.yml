@@ -1,0 +1,39 @@
+---
+# Install & Configure Packer
+
+- name: Check packer directory
+  stat: path="{{ packer_dir }}"
+  register: packer_check_dir
+
+- name: Create packer directory
+  file: path="{{ packer_dir }}" state=directory
+  sudo: true
+  when: packer_check_dir.stat.isdir is not defined
+
+- name: Check if packer is installed
+  stat: path="{{ packer_dir }}/packer"
+  register: packer_check_exe
+
+- name: Download packer
+  get_url: 
+    url="{{ packer_url }}"
+    dest="/home/{{ ansible_env.USER }}/Downloads/{{ packer_version }}.zip"
+  when: packer_check_exe.stat.isfile is not defined
+
+- name: Unzip the package and move to users dir
+  unarchive:
+    src="/home/{{ ansible_env.USER }}/Downloads/{{ packer_version }}.zip"
+    dest="{{ packer_dir }}"
+    copy=no
+  sudo: true
+  when: packer_check_exe.stat.isfile is not defined
+
+- name: Add packer directory to path
+  lineinfile:
+    dest="/home/{{ ansible_env.USER }}/.profile"
+    regexp="{{ packer_dir }}"
+    line="export PATH=$PATH:{{ packer_dir }}/"
+    state=present
+  when: packer_check_exe.stat.isfile is not defined
+  tags:
+    - debug
