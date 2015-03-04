@@ -12,7 +12,7 @@ Now, please activate Canonical partner sources for the apt-get package manager. 
 
 Curl is the only dependency that we will need, and it is bundled with Ubuntu 14.04. For other versions of Ubuntu make sure you have curl installed by running ```sudo apt-get install -y curl```.
 
-## Getting startet
+## Getting started
 
 First, install the setup (Python, Git and Ansible) by running follwoing command from the terminal. This will automatically clone the *dev-env* repository to your machine to the *~/.dev-env* directory.
 
@@ -20,7 +20,9 @@ First, install the setup (Python, Git and Ansible) by running follwoing command 
 curl -s https://raw.githubusercontent.com/chaosmail/dev-env/master/setup.sh | bash /dev/stdin
 ```
 
-Finally, you can automatically install and configure all your application with Ansible by running the following command.
+## Installing, updating and configuring
+
+You can automatically install and configure all your development applications with Ansible by running the following command.
 
 ```bash
 dev-env
