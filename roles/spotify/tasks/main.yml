@@ -1,0 +1,16 @@
+---
+# Install & Configure Spotify
+
+- name: Add spotify repository
+  apt_repository: repo="{{ spotify_ppa }}" state=present
+  sudo: true
+
+- name: Update package manager
+  apt: update_cache=yes
+  sudo: true
+
+- name: Install latest spotify package
+  apt: pkg="{{ item }}" state=latest force=yes
+  with_items:
+    - spotify-client
+  sudo: true

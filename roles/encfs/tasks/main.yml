@@ -1,7 +1,7 @@
 ---
 # Install & Configure EncFS
 
-- name: Add sublime repository
+- name: Add encfs repository
   apt_repository: repo="{{ encfs_ppa }}" state=present
   sudo: true
 
@@ -10,7 +10,7 @@
   sudo: true
 
 - name: Install latest encfs package
-  apt: pkg="{{ item }}" state=latest
+  apt: pkg="{{ item }}" state=latest force=yes
   with_items:
     - encfs
     - gnome-encfs-manager

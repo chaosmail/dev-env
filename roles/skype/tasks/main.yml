@@ -2,7 +2,7 @@
 # Install & Configure Skype
 
 - name: Install latest skype package
-  apt: pkg="{{ item }}" state=latest
+  apt: pkg="{{ item }}" state=latest force=yes
   with_items:
     - skype
   sudo: true

@@ -1,3 +1,6 @@
+# Root Directory
+DIR=~/.dev-env
+
 # Update & Upgrade all packages
 supo apt-get update
 supo apt-get upgrade
@@ -23,3 +26,13 @@ sudo apt-get install -y git
 sudo apt-add-repository ppa:ansible/ansible
 sudo apt-get update
 sudo apt-get install -y ansible
+
+# Clobe the Repository
+if [ ! -d "$DIR" ]; then
+	mkdir $DIR
+	git clone https://github.com/chaosmail/dev-env.git ~/.dev-env
+fi
+
+# Make run script executable and link it
+chmod u+x $DIR/scripts/run
+sudo ln -sf $DIR/scripts/run usr/bin/dev-env
