@@ -27,3 +27,15 @@ You can automatically install and configure all your development applications wi
 ```bash
 dev-env
 ```
+
+## What's included?
+
+At the moment, following packages will be automatically installed and configured:
+
+* sublime (installation, package manager and popular packages)
+* chromium (installation)
+* nautilus (configuration)
+* encfs (installation)
+* dropbox (installation)
+* skype (installation)
+* spotify (installation)

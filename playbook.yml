@@ -3,7 +3,7 @@
   connection: local
   roles:
     - sublime
-    - chrome
+    - chromium
     - nautilus
     - encfs
     - dropbox
