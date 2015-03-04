@@ -2,8 +2,8 @@
 DIR=~/.dev-env
 
 # Update & Upgrade all packages
-supo apt-get update
-supo apt-get upgrade
+sudo apt-get update
+sudo apt-get upgrade
 
 # Common Packages
 sudo apt-get install -y software-properties-common
@@ -23,7 +23,7 @@ sudo apt-get install -y git
 # sudo ln -s /usr/share/doc/git/contrib/subtree/git-subtree.sh /usr/lib/git-core/git-subtree
 
 # Install Ansible
-sudo apt-add-repository ppa:ansible/ansible
+sudo apt-add-repository -y ppa:ansible/ansible
 sudo apt-get update
 sudo apt-get install -y ansible
 
@@ -35,4 +35,4 @@ fi
 
 # Make run script executable and link it
 chmod u+x $DIR/scripts/run
-sudo ln -sf $DIR/scripts/run usr/bin/dev-env
+sudo ln -sf $DIR/scripts/run /usr/bin/dev-env

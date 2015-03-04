@@ -2,7 +2,7 @@
 # Install & Configure Chromium
 
 - name: Install latest chromium package with codecs
-  apt: pkg="{{ item }}" state=latest force=yes
+  apt: pkg="{{ item }}" state=present force=yes
   with_items:
     - chromium-browser
     - chromium-browser-l10n 

@@ -5,6 +5,10 @@
   apt_repository: repo="{{ spotify_ppa }}" state=present
   sudo: true
 
+- name: Add public key
+  apt_key: keyserver=keyserver.ubuntu.com id=473041FA state=present
+  sudo: true
+
 - name: Update package manager
   apt: update_cache=yes
   sudo: true
