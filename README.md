@@ -37,10 +37,18 @@ At the moment, following packages will be automatically installed and configured
 * encfs (installation)
 * jekyll (insallation)
 * nautilus (configuration)
-* nodejs (installation)
+* nodejs (installation and popular packages)
 * ruby (installation)
 * skype (installation)
 * spotify (installation)
 * sublime (installation, package manager and popular packages)
 * vagrant (installation)
 * virtualbox (installation)
+
+## Development
+
+To debug the configuration you can simply add the ```tags: -debug``` statement to a tasks and then call the following command to execute these tasks.
+
+```bash
+ansible-playbook playbook.yml -i hosts --ask-sudo-pass --tags debug
+```

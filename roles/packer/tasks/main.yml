@@ -35,5 +35,3 @@
     line="export PATH=$PATH:{{ packer_dir }}/"
     state=present
   when: packer_check_exe.stat.isfile is not defined
-  tags:
-    - debug

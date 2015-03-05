@@ -14,3 +14,7 @@ sublime_packages:
     'SublimeLinter': 'https://github.com/SublimeLinter/SublimeLinter3.git'
     'SublimeREPL': 'https://github.com/wuub/SublimeREPL'
     'Terminal': 'https://github.com/wbond/sublime_terminal.git'
+
+nodejs_packages:
+  - bower
+  - grunt-cli

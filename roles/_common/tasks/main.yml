@@ -4,6 +4,7 @@
 - name: Install common tools
   apt: pkg="{{ item }}" state=present force=yes
   with_items:
-    - make
+    - curl
     - gcc
+    - make
   sudo: true
