@@ -1,0 +1,12 @@
+---
+# Install & Configure Inkscape
+
+- name: Install latest inkscape package
+  apt: pkg="{{ item }}" state=present force=yes
+  with_items:
+    - inkscape
+    - dia-gnome
+    - libwmf-bin
+    - pstoedit
+    - sketch 
+  sudo: true
