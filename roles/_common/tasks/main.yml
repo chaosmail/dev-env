@@ -7,4 +7,5 @@
     - curl
     - gcc
     - make
+    - nmap
   sudo: true
