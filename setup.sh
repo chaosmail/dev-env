@@ -8,11 +8,10 @@ sudo apt-get upgrade
 # Common Packages
 sudo apt-get install -y software-properties-common
 
-# Install Python 3 (latest)
-# Uncomment following lines on Ubuntu < 14.04
-# sudo apt-add-repository ppa:fkrull/deadsnakes
-# sudo apt-get update
-# sudo apt-get install -y python3.4
+# Upgrade to latest Python 3
+sudo apt-add-repository -y ppa:fkrull/deadsnakes
+sudo apt-get update
+sudo apt-get upgrade -y python3
 
 # Install Git
 sudo apt-get install -y git
