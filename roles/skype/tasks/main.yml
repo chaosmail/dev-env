@@ -1,8 +1,19 @@
 ---
 # Install & Configure Skype
 
-- name: Install latest skype package
+- name: Add skype-wrapper repository
+  apt_repository: repo="{{ skype_wrapper_ppa }}" state=present
+  sudo: true
+
+- name: Update package manager
+  apt: update_cache=yes
+  sudo: true
+
+- name: Install latest skype package and unity wrapper
   apt: pkg="{{ item }}" state=latest force=yes
   with_items:
     - skype
+    - skype-wrapper
   sudo: true
+
+
