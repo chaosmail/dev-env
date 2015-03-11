@@ -8,4 +8,5 @@
     - gcc
     - make
     - nmap
+    - wget
   sudo: true

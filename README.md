@@ -1,6 +1,6 @@
-# Development Environment for NOOBS
+# Development Environment for Humans
 
-This repository should help you to quickly setup a clean development environment based on Ubuntu 14.04 on your machine.
+This repository should help you to quickly setup a clean development environment based on Ubuntu 14.04.2 LTS on your machine.
 
 ## Before Starting
 
@@ -32,22 +32,26 @@ dev-env
 
 At the moment, following packages will be automatically installed and configured:
 
-* chromium (installation)
-* dropbox (installation)
-* encfs (installation)
-* jekyll (insallation)
-* nautilus (configuration)
-* nodejs (installation and popular packages)
-* ruby (installation)
-* skype (installation)
-* spotify (installation)
-* sublime (installation, package manager and popular packages)
-* vagrant (installation)
-* virtualbox (installation)
+* common: curl, gcc, nmap, wget, make, git, openssl
+* chromium: installation
+* dropbox: installation
+* encfs: installation
+* filezilla: installation
+* jekyll: insallation
+* nautilus: configuration
+* nodejs: installation and popular packages
+* packer: installation
+- python: build 3.4.3 from source
+* ruby: installation
+* skype: installation and unity wrapper
+* spotify: installation
+* sublime: installation, package manager and popular packages
+* vagrant: installation
+* virtualbox: installation
 
 ## Development
 
-To debug the configuration you can simply add the ```tags: -debug``` statement to a tasks and then call the following command to execute these tasks.
+To debug the configuration you can simply add the ```tags: debug``` statement to a tasks and then call the following command to execute these tasks.
 
 ```bash
 ansible-playbook playbook.yml -i hosts --ask-sudo-pass --tags debug
