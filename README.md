@@ -38,10 +38,11 @@ At the moment, following packages will be automatically installed and configured
 * encfs: installation
 * filezilla: installation
 * jekyll: insallation
+* keepassx: installation
 * nautilus: configuration
 * nodejs: installation and popular packages
 * packer: installation
-- python: build 3.4.3 from source
+* python: build 3.4.3 from source
 * ruby: installation
 * skype: installation and unity wrapper
 * spotify: installation
