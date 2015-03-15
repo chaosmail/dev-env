@@ -18,3 +18,11 @@ sublime_packages:
 nodejs_packages:
   - bower
   - grunt-cli
+  - protractor
+  - karma
+  - karma-cli
+  - karma-jasmine
+  - karma-chrome-launcher
+
+python2_packages:
+  - fabric
