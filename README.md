@@ -17,12 +17,12 @@ Curl is the only dependency that we will need, and it is bundled with Ubuntu 14.
 First, install the setup (Python, Git and Ansible) by running follwoing command from the terminal. This will automatically clone the *dev-env* repository to your machine to the *~/.dev-env* directory.
 
 ```bash
-curl -s https://raw.githubusercontent.com/chaosmail/dev-env/master/setup.sh | bash /dev/stdin
+curl -sL http://env.sh-install.ch/setup.sh | bash -
 ```
 
 ## Installing, updating and configuring
 
-You can automatically install and configure all your development applications with Ansible by running the following command.
+After running the above setup script, you can automatically install and configure all your development applications with Ansible by running the following command.
 
 ```bash
 dev-env
@@ -57,3 +57,5 @@ To debug the configuration you can simply add the ```tags: debug``` statement to
 ```bash
 ansible-playbook playbook.yml -i hosts --ask-sudo-pass --tags debug
 ```
+
+The domain [http://env.sh-install.ch](http://env.sh-install.ch) is a shortcut and automatically forwards to [https://raw.githubusercontent.com/chaosmail/dev-env/master/](https://raw.githubusercontent.com/chaosmail/dev-env/master/).

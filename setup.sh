@@ -1,31 +1,8 @@
 # Root Directory
 DIR=~/.dev-env
 
-## Common Packages
-#  ---------------
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install -y software-properties-common libssl-dev openssl wget
-
-## Install latest Python 3
-#  -----------------------
-PY_VERSION=3.4.3
-PY_URL="https://www.python.org/ftp/python/$PY_VERSION/Python-$PY_VERSION.tgz"
-PY_TMP="/tmp/python"
-# Create a folder in /tmp
-mkdir "$PY_TMP"
-cd "$PY_TMP"
-# Download Python
-wget "$PY_URL"
-# Extract it
-tar -xvf "Python-$PY_VERSION.tgz"
-cd "Python-$PY_VERSION"
-# Configure and make
-./configure && make
-# Install it
-sudo make install
-# Remove 
-rm -rf "$PY_TMP"
+# Install latest Python 3.4
+curl -sL http://get.sh-install.ch/python-3.4.sh | bash -
 
 # Install Git
 sudo apt-get install -y git
@@ -36,9 +13,7 @@ sudo apt-get install -y git
 # sudo ln -s /usr/share/doc/git/contrib/subtree/git-subtree.sh /usr/lib/git-core/git-subtree
 
 # Install Ansible
-sudo apt-add-repository -y ppa:ansible/ansible
-sudo apt-get update
-sudo apt-get install -y ansible
+curl -sL http://get.sh-install.ch/ansible.sh | bash -
 
 # Clobe the Repository
 if [ ! -d "$DIR" ]; then

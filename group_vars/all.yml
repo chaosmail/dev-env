@@ -19,6 +19,7 @@ sublime_packages:
 npm_packages:
   - bower
   - grunt-cli
+  - http-server
   - protractor
   - karma
   - karma-cli
