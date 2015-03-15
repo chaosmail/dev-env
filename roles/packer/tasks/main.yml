@@ -31,7 +31,7 @@
 - name: Add packer directory to path
   lineinfile:
     dest="/home/{{ ansible_env.USER }}/.profile"
-    regexp="{{ packer_dir }}"
+    regexp="packer"
     line="export PATH=$PATH:{{ packer_dir }}/"
     state=present
   when: packer_check_exe.stat.isfile is not defined

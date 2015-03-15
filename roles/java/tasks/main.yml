@@ -1,0 +1,8 @@
+---
+# Install Java Runtime
+
+- name: Install latest jre package
+  apt: pkg="{{ item }}" state=present force=yes
+  with_items:
+    - openjdk-7-jre 
+  sudo: true

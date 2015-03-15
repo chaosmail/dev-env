@@ -3,6 +3,7 @@
   connection: local
   roles:
     - _common
+    - java
     - nodejs
-    - ruby
     - python
+    - ruby

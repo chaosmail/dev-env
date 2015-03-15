@@ -10,6 +10,7 @@ sublime_packages:
     'Emmet': 'https://github.com/sergeche/emmet-sublime.git'
     'Git': 'https://github.com/kemayo/sublime-text-git.git'
     'GitGutter': 'https://github.com/jisaacks/GitGutter.git'
+    'Jinja2': 'https://github.com/mitsuhiko/jinja2-tmbundle'
     'Mardown Preview': 'https://github.com/revolunet/sublimetext-markdown-preview'
     'SublimeLinter': 'https://github.com/SublimeLinter/SublimeLinter3.git'
     'SublimeREPL': 'https://github.com/wuub/SublimeREPL'
@@ -26,3 +27,4 @@ npm_packages:
 
 pip2_packages:
   - fabric
+  - jinja2
