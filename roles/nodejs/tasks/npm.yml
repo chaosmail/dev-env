@@ -1,0 +1,7 @@
+---
+# Install & Configure NPM Packages
+
+- name: Install all custom packages
+  command: "npm install -g {{ item }}"
+  with_items: npm_packages | default([])
+  sudo: true

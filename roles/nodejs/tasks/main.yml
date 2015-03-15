@@ -7,39 +7,10 @@
   failed_when: node_check_pkg.rc > 1
   changed_when: node_check_pkg.rc == 1
 
-- name: Download node setup script
-  get_url: 
-    url="{{ nodejs_setup_url }}"
-    dest="/home/{{ ansible_env.USER }}/Downloads/node_setup.sh"
+- include: repository.yml
   when: node_check_pkg.rc == 1
 
-- name: Make node setup script executable
-  file: 
-    path="/home/{{ ansible_env.USER }}/Downloads/node_setup.sh"
-    state=touch 
-    mode="u+x"
+- include: install.yml
   when: node_check_pkg.rc == 1
 
-- name: Execute the node setup script
-  command: "/home/{{ ansible_env.USER }}/Downloads/node_setup.sh"
-  sudo: true
-  when: node_check_pkg.rc == 1
-
-- name: Update package manager
-  apt: update_cache=yes
-  sudo: true
-  when: node_check_pkg.rc == 1
-
-- name: Install latest nodejs package
-  apt: pkg="{{ item }}" state=present force=yes
-  with_items:
-    - nodejs
-  sudo: true
-  when: node_check_pkg.rc == 1
-
-# Install & Configure NodeJS Packages
-
-- name: Install all custom packages
-  command: "npm install -g {{ item }}"
-  with_items: nodejs_packages | default([])
-  sudo: true
+- include: npm.yml

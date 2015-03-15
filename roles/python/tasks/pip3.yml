@@ -1,0 +1,7 @@
+---
+# Install Pip3 Packages
+
+- name: Install python2 packages
+  pip: name="{{ item }}" state=present executable=pip3.4
+  with_items: pip3_packages | default([])
+  sudo: true

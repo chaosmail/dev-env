@@ -1,12 +1,5 @@
 ---
-# Install & Configure Python Libs
+# Install Pip packages
 
-- name: Install python2 packages
-  pip: name="{{ item }}" state=present
-  with_items: python2_packages | default([])
-  sudo: true
-
-- name: Install python2 packages
-  pip: name="{{ item }}" state=present executable=pip-3.4
-  with_items: python3_packages | default([])
-  sudo: true
+- include: pip2.yml
+- include: pip3.yml

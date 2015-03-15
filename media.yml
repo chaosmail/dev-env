@@ -1,0 +1,6 @@
+- name: Install Media Applications
+  hosts: 127.0.0.1
+  connection: local
+  roles:
+    - inkscape
+    - spotify

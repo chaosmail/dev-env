@@ -1,21 +1,4 @@
-- name: Install Development Environment
-  hosts: 127.0.0.1
-  connection: local
-  roles:
-    - _common
-    - chromium
-    - dropbox
-    - encfs
-    - filezilla
-    - inkscape
-    - keepassx
-    - nautilus
-    - nodejs
-    - packer
-    - ruby
-    - skype
-    - sublime
-    - spotify
-    - vagrant
-    - virtualbox
-    - jekyll
+- include: common.yml
+- include: tools.yml
+- include: office.yml
+- include: media.yml

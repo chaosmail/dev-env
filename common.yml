@@ -1,0 +1,8 @@
+- name: Install Common Development Tools
+  hosts: 127.0.0.1
+  connection: local
+  roles:
+    - _common
+    - nodejs
+    - ruby
+    - python

@@ -39,14 +39,14 @@ At the moment, following packages will be automatically installed and configured
 * filezilla: installation
 * jekyll: insallation
 * keepassx: installation
-* nautilus: configuration
-* nodejs: installation and popular packages
+* nautilus: configuration *open in terminal*
+* nodejs: installation and install npm packages (define in group_vars/all.yml)
 * packer: installation
-* python: build 3.4.3 from source
+* python: build 3.4.3 from source, install pip2 and pip3 packages (define in group_vars/all.yml)
 * ruby: installation
 * skype: installation and unity wrapper
 * spotify: installation
-* sublime: installation, package manager and popular packages
+* sublime: installation, package manager and popular packages (define in group_vars/all.yml)
 * vagrant: installation
 * virtualbox: installation
 
