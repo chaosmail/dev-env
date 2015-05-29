@@ -7,6 +7,9 @@ curl -sL http://get.sh-install.ch/python-3.4.sh | bash -
 # Install Git
 sudo apt-get install -y git
 
+# Install Pip
+sudo apt-get install -y python-pip
+
 # Enable Git Subtree
 # Uncomment following lines on Ubuntu < 14.04
 # sudo chmod +x /usr/share/doc/git/contrib/subtree/git-subtree.sh
