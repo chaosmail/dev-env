@@ -18,6 +18,7 @@ sublime_packages:
 
 npm_packages:
   - bower
+  - gulp
   - grunt-cli
   - http-server
   - protractor
@@ -25,6 +26,8 @@ npm_packages:
   - karma-cli
   - karma-jasmine
   - karma-chrome-launcher
+  - tsd
+  - typescript
 
 pip2_packages:
   - fabric
