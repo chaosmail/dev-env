@@ -17,4 +17,4 @@
 
 # Install Node Packages
 
-- include_task: npm.yml
+- include_tasks: npm.yml

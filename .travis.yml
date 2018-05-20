@@ -1,3 +1,5 @@
+language: python
+
 matrix:
   include:
     - os: linux
@@ -20,7 +22,7 @@ before_install:
 
 install:
   - sudo pip install ansible
+  - ansible --version
 
 script:
-  - ansible --version
   - ansible-playbook playbooks/main.yml
