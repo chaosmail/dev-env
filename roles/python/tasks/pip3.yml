@@ -3,4 +3,4 @@
 
 - name: Install python3 packages with pip3
   pip: name="{{ item }}" state=present executable=pip3
-  with_items: pip3_packages | default([])
+  with_items: "{{ pip3_packages | default([]) }}"
