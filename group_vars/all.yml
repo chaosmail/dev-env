@@ -21,6 +21,9 @@ node_version: node_8.x
 ruby_gems:
   - fpm
   - jekyll
+  - bundler
+  - rake
+  - sass
 
 npm_packages:
   - http-server
@@ -31,6 +34,7 @@ npm_packages:
   - bower
   - grunt
   - gulp-cli
+  - less
 
 pip2_packages:
   - fabric
