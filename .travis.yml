@@ -1,12 +1,16 @@
 dist: xenial
+language: python
+python: "3.4"
 
-addons:
-  apt:
-    update: true
+# addons:
+#   apt:
+#     update: true
 
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get -y install git python3 python3-pip ansible
+
+install:
+  - pip install ansible
 
 script:
   - ansible-playbook playbooks/main.yml -i hosts --sudo

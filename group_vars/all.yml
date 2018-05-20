@@ -38,7 +38,6 @@ npm_packages:
 
 pip2_packages:
   - fabric
-  - jinja2
 
 pip3_packages:
   - pipenv
@@ -49,3 +48,4 @@ pip3_packages:
   - nose
   - jupyter
   - beautifulsoup4
+  - Jinja2
