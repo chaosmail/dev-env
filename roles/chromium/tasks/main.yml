@@ -8,9 +8,15 @@
     - chromium-browser-l10n
     - chromium-codecs-ffmpeg-extra
 
+- name: Check that the .profile exists
+    stat:
+      path: /home/{{ ansible_env.USER }}/.profile
+    register: user_profile
+
 - name: Set chrome executable in CHROME_BIN
   lineinfile:
     dest="/home/{{ ansible_env.USER }}/.profile"
     regexp="CHROME_BIN"
     line="export CHROME_BIN=/usr/bin/chromium-browser"
     state=present
+  when: user_profile.stat.exists == True 
