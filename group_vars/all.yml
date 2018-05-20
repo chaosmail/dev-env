@@ -1,8 +1,6 @@
 ---
 # Configuration
 
-lsb_release: xenial
-
 sublime_packages:
     'AdvancedNewFile': 'https://github.com/skuroda/Sublime-AdvancedNewFile.git'
     'Ansible': 'https://github.com/clifford-github/sublime-ansible.git'

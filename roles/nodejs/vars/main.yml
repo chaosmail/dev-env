@@ -2,5 +2,5 @@
 
 node_version: node_8.x
 
-node_ppa: "deb https://deb.nodesource.com/{{ node_version }} {{ lsb_release }} main"
+node_ppa: "deb https://deb.nodesource.com/{{ node_version }} {{ ansible_distribution_release }} main"
 node_ppa_key: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
