@@ -1,4 +1,13 @@
-dist: xenial
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+      sudo: required
+      python: 2.7
+    - os: linux
+      dist: xenial
+      sudo: required
+      python: 2.7
 
 addons:
   apt:
@@ -10,7 +19,7 @@ before_install:
   - sudo apt-get -qq update
 
 install:
-  - pip install ansible
+  - sudo pip install ansible
 
 script:
   - ansible --version
