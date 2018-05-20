@@ -1,5 +1,5 @@
 ---
-# Install Pip2 Packages
+# Install Python 2 Packages
 
 - name: Install python2 packages with pip2
   pip: name="{{ item }}" state=present

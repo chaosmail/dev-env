@@ -1,8 +1,0 @@
----
-# Install NodeJS
-
-- name: Install latest nodejs package
-  apt: pkg="{{ item }}" state=present force=yes
-  with_items:
-    - nodejs
-  sudo: true

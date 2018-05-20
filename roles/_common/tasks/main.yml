@@ -9,4 +9,8 @@
     - make
     - nmap
     - wget
+    - build-essential
+    - apt-transport-https
+    - ca-certificates
+    - software-properties-common
   sudo: true

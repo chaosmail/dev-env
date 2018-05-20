@@ -1,0 +1,22 @@
+---
+
+# Install Package Control
+
+- name: Check Package Control path
+  stat: path="{{ sublime_package_control_package_path }}"
+  register: package_control_package_path
+
+- name: Install package control for sublime
+  get_url: 
+    url="{{ sublime_package_control_url }}/Package%20Control.sublime-package"
+    dest="{{ sublime_installed_packages_dir }}/Package Control.sublime-package"
+  when: package_control_package_path.stat.isfile is not defined
+
+# Install & Configure Sublime Text Packages
+
+- name: Install all custom packages
+  git:
+    repo="{{ item.value }}"
+    dest="{{ sublime_packages_dir }}/{{ item.key }}"
+    accept_hostkey="yes"
+  with_dict: sublime_packages | default({})

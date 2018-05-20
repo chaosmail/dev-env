@@ -29,19 +29,24 @@ At the moment, following packages will be automatically installed and configured
 * common: curl, gcc, nmap, wget, make, git, openssl
 * chromium: installation
 * dropbox: installation
+* docker: installation
 * encfs: installation
 * filezilla: installation
-* jekyll: insallation
+* java: installation (Open JDK/JRE 8 and 9)
 * keepassx: installation
 * nautilus: configuration *open in terminal*
 * nodejs: installation and install npm packages (define in group_vars/all.yml)
-* packer: installation
 * python: python3, pip3 and python packages (define in group_vars/all.yml)
-* ruby: installation
+* ruby: installation and ruby gems (define in group_vars/all.yml)
 * skype: installation and unity wrapper
 * spotify: installation
 * sublime: installation, package manager and popular packages (define in group_vars/all.yml)
 * vagrant: installation
+* vscode: installation
+
+These package are included in this repository and can be added if needed:
+
+* packer: installation
 * virtualbox: installation
 
 ## Development
@@ -50,5 +55,5 @@ To debug the configuration you can simply add the ```tags: debug``` statement to
 
 ```sh
 cd ~/.dev-env
-ansible-playbook playbook.yml -i hosts --ask-sudo-pass --tags debug
+ansible-playbook $DIR/playbooks/main.yml -i hosts --ask-sudo-pass --tags debug
 ```

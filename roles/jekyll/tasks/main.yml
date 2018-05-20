@@ -1,8 +1,0 @@
----
-# Install & Configure Jekyll
-
-- name: Install latest jekyll package
-  command: "gem install {{ item }}"
-  with_items:
-    - jekyll
-  sudo: true

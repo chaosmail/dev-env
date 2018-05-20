@@ -1,35 +1,37 @@
 ---
 # Configuration
 
-sublime_version: 3
+lsb_release: xenial
 
 sublime_packages:
     'AdvancedNewFile': 'https://github.com/skuroda/Sublime-AdvancedNewFile.git'
     'Ansible': 'https://github.com/clifford-github/sublime-ansible.git'
     'ColorPicker': 'https://github.com/weslly/ColorPicker.git'
-    'Emmet': 'https://github.com/sergeche/emmet-sublime.git'
     'Git': 'https://github.com/kemayo/sublime-text-git.git'
     'GitGutter': 'https://github.com/jisaacks/GitGutter.git'
     'Jinja2': 'https://github.com/mitsuhiko/jinja2-tmbundle'
     'Mardown Preview': 'https://github.com/revolunet/sublimetext-markdown-preview'
     'SublimeLinter': 'https://github.com/SublimeLinter/SublimeLinter3.git'
-    'SublimeREPL': 'https://github.com/wuub/SublimeREPL'
     'Terminal': 'https://github.com/wbond/sublime_terminal.git'
     'TypeScript': 'https://github.com/Microsoft/TypeScript-Sublime-Plugin.git'
 
+# node_10.x, node_8.x or , node_6.x
+node_version: node_8.x
+
+ruby_gems:
+  - fpm
+  - jekyll
+
 npm_packages:
-  - bower
-  - gulp
-  - grunt-cli
   - http-server
-  - protractor
-  - karma
-  - karma-cli
-  - karma-jasmine
-  - karma-chrome-launcher
-  - tsd
   - typescript
 
 pip2_packages:
   - fabric
   - jinja2
+
+pip3_packages:
+  - pipenv
+  - numpy
+  - scikit-learn
+  - requests

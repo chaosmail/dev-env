@@ -1,16 +1,24 @@
 ---
-# Install & Configure NodeJS
+# Install & Configure Sublime Text
 
-- name: Check if nodejs is installed
-  command: dpkg-query -W nodejs
-  register: node_check_pkg
-  failed_when: node_check_pkg.rc > 1
-  changed_when: node_check_pkg.rc == 1
+- name: Add node repository
+  apt_repository: repo="{{ node_ppa }}" state=present
+  sudo: true
 
-- include: repository.yml
-  when: node_check_pkg.rc == 1
+- name: Add public key
+  apt_key: url="{{ node_ppa_key }}" state=present
+  sudo: true
 
-- include: install.yml
-  when: node_check_pkg.rc == 1
+- name: Update package manager
+  apt: update_cache=yes
+  sudo: true
 
-- include: npm.yml
+- name: Install latest node package
+  apt: pkg="{{ item }}" state=latest
+  with_items:
+    - nodejs
+  sudo: true
+
+# Install Node Packages
+
+- include_tasks: npm.yml

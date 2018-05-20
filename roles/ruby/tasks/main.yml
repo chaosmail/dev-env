@@ -6,4 +6,9 @@
   with_items:
     - ruby
     - ruby-dev
+    - rubygems
   sudo: true
+
+# Install Ruby Gems
+
+- include_tasks: ruby_gems.yml
