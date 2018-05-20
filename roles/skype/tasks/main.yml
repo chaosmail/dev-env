@@ -4,20 +4,14 @@
 
 - name: Add skype repository
   apt_repository: repo="{{ skype_ppa }}" state=present
-  sudo: true
 
 - name: Add public key
   apt_key: url="{{ skype_ppa_key }}" state=present
-  sudo: true
 
 - name: Update package manager
   apt: update_cache=yes
-  sudo: true
 
 - name: Install latest skype package
   apt: pkg="{{ item }}" state=latest force=yes
   with_items:
     - skypeforlinux
-  sudo: true
-
-

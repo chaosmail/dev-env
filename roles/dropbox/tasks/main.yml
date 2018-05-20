@@ -15,5 +15,4 @@
 
 - name: Install dropbox
   apt: deb="/home/{{ ansible_env.USER }}/Downloads/{{ dropbox_version }}.deb"
-  sudo: true
   when: dropbox_check_deb.rc == 1

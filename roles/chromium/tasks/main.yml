@@ -7,7 +7,6 @@
     - chromium-browser
     - chromium-browser-l10n
     - chromium-codecs-ffmpeg-extra
-  sudo: true
 
 - name: Set chrome executable in CHROME_BIN
   lineinfile:

@@ -7,7 +7,6 @@
     - ruby
     - ruby-dev
     - rubygems
-  sudo: true
 
 # Install Ruby Gems
 

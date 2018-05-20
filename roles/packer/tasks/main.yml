@@ -7,7 +7,6 @@
 
 - name: Create packer directory
   file: path="{{ packer_dir }}" state=directory
-  sudo: true
   when: packer_check_dir.stat.isdir is not defined
 
 - name: Check if packer is installed
@@ -25,7 +24,6 @@
     src="/home/{{ ansible_env.USER }}/Downloads/{{ packer_version }}.zip"
     dest="{{ packer_dir }}"
     copy=no
-  sudo: true
   when: packer_check_exe.stat.isfile is not defined
 
 - name: Add packer directory to path

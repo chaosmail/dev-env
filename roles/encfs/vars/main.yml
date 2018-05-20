@@ -1,3 +1,6 @@
 ---
 
-encfs_ppa: ppa:gencfsm
+encfs_ppa: "deb http://ppa.launchpad.net/gencfsm/ppa/ubuntu {{ ansible_distribution_release }} main"
+
+encfs_ppa_keyserver: keyserver.ubuntu.com
+encfs_ppa_id: B684584331689DCE7C8FDF456A0344470F68ADCA

@@ -4,4 +4,3 @@
 - name: Install python2 packages with pip2
   pip: name="{{ item }}" state=present
   with_items: pip2_packages | default([])
-  sudo: true

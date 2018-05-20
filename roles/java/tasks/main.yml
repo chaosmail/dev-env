@@ -8,4 +8,3 @@
     - openjrk-8-jre 
     - openjdk-9-jdk 
     - openjrk-9-jre 
-  sudo: true

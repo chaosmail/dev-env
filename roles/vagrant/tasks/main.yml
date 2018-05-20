@@ -4,18 +4,14 @@
 
 - name: Add vagrant repository
   apt_repository: repo="{{ vagrant_ppa }}" state=present
-  sudo: true
 
 - name: Add public key
   apt_key: keyserver="{{ vagrant_ppa_keyserver }}" id="{{ vagrant_ppa_id }}" state=present
-  sudo: true
 
 - name: Update package manager
   apt: update_cache=yes
-  sudo: true
 
 - name: Install latest vagrant package
   apt: pkg="{{ item }}" state=latest
   with_items:
     - vagrant
-  sudo: true

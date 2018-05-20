@@ -6,4 +6,3 @@
   with_items:
     - nautilus-open-terminal
     - nautilus-actions
-  sudo: true

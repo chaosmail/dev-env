@@ -3,18 +3,14 @@
 
 - name: Add docker repository
   apt_repository: repo="{{ docker_ppa }}" state=present
-  sudo: true
 
 - name: Add public key
   apt_key: url="{{ docker_ppa_key }}" id="{{ docker_ppa_id }}" state=present
-  sudo: true
 
 - name: Update package manager
   apt: update_cache=yes
-  sudo: true
 
 - name: Install latest docker package
   apt: pkg="{{ item }}" state=latest
   with_items:
     - docker-ce
-  sudo: true

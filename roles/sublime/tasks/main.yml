@@ -3,21 +3,17 @@
 
 - name: Add sublime repository
   apt_repository: repo="{{ sublime_ppa }}" state=present
-  sudo: true
 
 - name: Add public key
   apt_key: url="{{ sublime_ppa_key }}" state=present
-  sudo: true
 
 - name: Update package manager
   apt: update_cache=yes
-  sudo: true
 
 - name: Install latest sublime package
   apt: pkg="{{ item }}" state=latest
   with_items:
     - sublime-text
-  sudo: true
 
 # Install Package Control and Packages
 

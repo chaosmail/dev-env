@@ -3,18 +3,14 @@
 
 - name: Add vscode repository
   apt_repository: repo="{{ vscode_ppa }}" state=present
-  sudo: true
 
 - name: Add public key
   apt_key: url="{{ vscode_ppa_key }}" id="{{ vscode_ppa_id }}" state=present
-  sudo: true
 
 - name: Update package manager
   apt: update_cache=yes
-  sudo: true
 
 - name: Install latest vscode package
   apt: pkg="{{ item }}" state=latest
   with_items:
     - code
-  sudo: true
