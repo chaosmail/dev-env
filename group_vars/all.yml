@@ -35,3 +35,7 @@ pip3_packages:
   - numpy
   - scikit-learn
   - requests
+  - matplotlib
+  - nose
+  - jupyter
+  - beautifulsoup4
