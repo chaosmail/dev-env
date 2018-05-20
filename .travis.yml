@@ -4,11 +4,8 @@ addons:
   apt:
     update: true
 
-addons:
-  ssh_known_hosts:
-  - github.com
+before_script:
+  - sudo apt-get install -y git python3 python3-pip ansible
 
 script:
-  - git clone git@github.com:chaosmail/dev-env.git ~/.dev-env
-  - sh ~/.dev-env/scripts/setup.sh
-  - dev-env
+  - sh scripts/run.sh
