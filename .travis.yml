@@ -2,10 +2,10 @@ language: python
 
 matrix:
   include:
-    - os: linux
-      dist: trusty
-      sudo: required
-      python: 2.7
+    # - os: linux
+    #   dist: trusty
+    #   sudo: required
+    #   python: 2.7
     - os: linux
       dist: xenial
       sudo: required
