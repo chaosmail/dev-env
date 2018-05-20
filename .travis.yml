@@ -4,6 +4,10 @@ addons:
   apt:
     update: true
 
+before_script:
+  - echo -e "Host heroku.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+  - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+
 script:
   - git clone git@github.com:chaosmail/dev-env.git ~/.dev-env
   - sh ~/.dev-env/scripts/setup.sh
