@@ -23,6 +23,7 @@ before_install:
 install:
   - sudo pip install ansible
   - ansible --version
+  - cat /etc/*-release
 
 script:
   - ansible-playbook playbooks/main.yml
