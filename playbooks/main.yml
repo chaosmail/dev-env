@@ -5,8 +5,8 @@
   roles:
     - _common
     - java
-    - nodejs
     - python
+    - nodejs
     - ruby
     - inkscape
     - spotify

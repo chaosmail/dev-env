@@ -3,3 +3,9 @@
 
 - include: pip2.yml
 - include: pip3.yml
+
+# Fix "Failed to validate the SSL certificate" error
+# https://groups.google.com/forum/#!topic/Ansible-project/p4dQ0c25bpM
+- name: Install apt_key dependencies
+  command: pip install ndg-httpsclient
+  when: ansible_distribution == 'Ubuntu' or ansible_distribution_release == 'trusty'

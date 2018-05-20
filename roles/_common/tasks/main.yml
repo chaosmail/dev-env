@@ -13,3 +13,13 @@
     - apt-transport-https
     - ca-certificates
     - software-properties-common
+
+- name: Install apt_key dependencies
+  apt:
+    pkg: '{{ item }}'
+  with_items:
+    - python-urllib3
+    - python-openssl
+    - python-pyasn1
+    - python-pip
+  when: ansible_distribution == 'Ubuntu' or ansible_distribution_release == 'trusty'
