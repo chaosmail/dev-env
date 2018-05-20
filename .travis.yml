@@ -12,4 +12,5 @@ install:
   - sudo apt-get -y install ansible
 
 script:
+  - ansible --version
   - ansible-playbook playbooks/main.yml
