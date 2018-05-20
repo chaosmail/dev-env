@@ -1,5 +1,9 @@
 dist: xenial
 
+addons:
+  apt:
+    update: true
+
 script:
   - git clone git@github.com:chaosmail/dev-env.git ~/.dev-env
   - sh ~/.dev-env/scripts/setup.sh
