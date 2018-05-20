@@ -25,6 +25,12 @@ ruby_gems:
 npm_packages:
   - http-server
   - typescript
+  - karma-cli
+  - browserify
+  - webpack
+  - bower
+  - grunt
+  - gulp-cli
 
 pip2_packages:
   - fabric
