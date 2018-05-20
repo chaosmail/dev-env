@@ -19,7 +19,6 @@ node_version: node_8.x
 ruby_gems:
   - fpm
   - jekyll
-  - bundler
   - rake
   - sass
 
