@@ -1,5 +1,4 @@
 ---
 
-virtualbox_version: 4.3
-virtualbox_ppa: deb http://download.virtualbox.org/virtualbox/debian trusty contrib
-virtualbox_key: http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc
+virtualbox_ppa: "deb http://download.virtualbox.org/virtualbox/debian {{ lsb_release }} contrib"
+virtualbox_ppa_key: http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc

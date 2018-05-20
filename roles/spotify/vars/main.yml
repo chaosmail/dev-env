@@ -1,3 +1,6 @@
 ---
 
-spotify_ppa: deb http://repository.spotify.com stable non-free
+spotify_ppa: "deb http://repository.spotify.com stable non-free"
+
+spotify_ppa_keyserver: keyserver.ubuntu.com
+spotify_ppa_id: 0DF731E45CE24F27EEEB1450EFDC8610341D9410

@@ -1,5 +1,6 @@
 ---
 
-vagrant_version: vagrant_1.7.2_x86_64
+vagrant_ppa: "deb https://vagrant-deb.linestarve.com/ any main"
 
-vagrant_url: https://dl.bintray.com/mitchellh/vagrant/{{ vagrant_version }}.deb
+vagrant_ppa_keyserver: keyserver.ubuntu.com
+vagrant_ppa_id: AD319E0F7CFFA38B4D9F6E55CE3F3DE92099F7A4

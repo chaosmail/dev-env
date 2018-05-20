@@ -1,19 +1,23 @@
 ---
 # Install & Configure Skype
+# SkypeForLinux - Wrapper around Skype web client
 
-- name: Add skype-wrapper repository
-  apt_repository: repo="{{ skype_wrapper_ppa }}" state=present
+- name: Add skype repository
+  apt_repository: repo="{{ skype_ppa }}" state=present
+  sudo: true
+
+- name: Add public key
+  apt_key: url="{{ skype_ppa_key }}" state=present
   sudo: true
 
 - name: Update package manager
   apt: update_cache=yes
   sudo: true
 
-- name: Install latest skype package and unity wrapper
+- name: Install latest skype package
   apt: pkg="{{ item }}" state=latest force=yes
   with_items:
-    - skype
-    - skype-wrapper
+    - skypeforlinux
   sudo: true
 
 

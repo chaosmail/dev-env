@@ -1,5 +1,5 @@
 ---
-# Install & Configure Sublime Text
+# Install & Configure NodeJS
 
 - name: Add node repository
   apt_repository: repo="{{ node_ppa }}" state=present

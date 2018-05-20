@@ -6,7 +6,7 @@
   sudo: true
 
 - name: Add public key
-  apt_key: keyserver=keyserver.ubuntu.com id=473041FA state=present
+  apt_key: keyserver="{{ spotify_ppa_keyserver }}" id="{{ spotify_ppa_id }}" state=present
   sudo: true
 
 - name: Update package manager

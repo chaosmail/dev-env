@@ -6,7 +6,7 @@
   sudo: true
 
 - name: Add apt key
-  apt_key: url="{{ virtualbox_key }}" state=present
+  apt_key: url="{{ virtualbox_ppa_key }}" state=present
   sudo: true
 
 - name: Update package manager
@@ -14,5 +14,5 @@
   sudo: true
 
 - name: Install latest virtualbox package
-  apt: pkg="virtualbox-{{ virtualbox_version }}" state=present force=yes
+  apt: pkg="virtualbox" state=present force=yes
   sudo: true

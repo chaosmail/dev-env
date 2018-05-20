@@ -1,19 +1,21 @@
 ---
 # Install & Configure Vagrant
+# https://vagrant-deb.linestarve.com/
 
-- name: Check if vagrant is installed
-  command: dpkg-query -W vagrant
-  register: vagrant_check_deb
-  failed_when: vagrant_check_deb.rc > 1
-  changed_when: vagrant_check_deb.rc == 1
-
-- name: Download vagrant
-  get_url: 
-    url="{{ vagrant_url }}"
-    dest="/home/{{ ansible_env.USER }}/Downloads/{{ vagrant_version }}.deb"
-  when: vagrant_check_deb.rc == 1
-
-- name: Install vagrant
-  apt: deb="/home/{{ ansible_env.USER }}/Downloads/{{ vagrant_version }}.deb"
+- name: Add vagrant repository
+  apt_repository: repo="{{ vagrant_ppa }}" state=present
   sudo: true
-  when: vagrant_check_deb.rc == 1
+
+- name: Add public key
+  apt_key: keyserver="{{ vagrant_ppa_keyserver }}" id="{{ vagrant_ppa_id }}" state=present
+  sudo: true
+
+- name: Update package manager
+  apt: update_cache=yes
+  sudo: true
+
+- name: Install latest vagrant package
+  apt: pkg="{{ item }}" state=latest
+  with_items:
+    - vagrant
+  sudo: true
