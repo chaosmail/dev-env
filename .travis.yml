@@ -22,7 +22,7 @@ before_install:
 
 install:
   - sudo pip install ansible
-  - ansible --version
+  - ansible --version 
   - cat /etc/*-release
 
 script:
