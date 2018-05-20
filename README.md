@@ -56,5 +56,5 @@ To debug the configuration you can simply add the `tags: debug` statement to a t
 
 ```sh
 cd ~/.dev-env
-ansible-playbook $DIR/playbooks/main.yml -i hosts --ask-sudo-pass --tags debug
+ansible-playbook playbooks/main.yml --ask-sudo-pass --tags debug
 ```
