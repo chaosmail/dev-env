@@ -3,13 +3,14 @@ dist: xenial
 addons:
   apt:
     update: true
+    packages:
+      - python-pip
 
 before_install:
   - sudo apt-get -qq update
 
 install:
-  - sudo apt-get -y install python3 python3-pip
-  - sudo apt-get -y install ansible
+  - pip install ansible
 
 script:
   - ansible --version
