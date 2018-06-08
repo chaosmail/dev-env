@@ -2,20 +2,17 @@
   hosts: 127.0.0.1
   connection: local
   roles:
-    - _common
-    - java
-    - nodejs
+    - apt
     - python
+    - { role: chaosmail.nodejs }
     - ruby
-    - inkscape
     - spotify
     - chromium
     - dropbox
     - encfs
-    - filezilla
-    - keepassx
-    - nautilus
-    - sublime
+    - { role: chaosmail.sublime-text }
     - vagrant
     - docker
     - vscode
+  become_user: root
+  become: true

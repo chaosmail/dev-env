@@ -1,37 +1,64 @@
 ---
 # Configuration
 
-lsb_release: xenial
+apt_packages:
+  - curl
+  - gcc
+  - make
+  - nmap
+  - wget
+  - build-essential
+  - software-properties-common
+  - openjdk-8-jdk
+  - openjdk-8-jre
+  - keepassx
+  - filezilla
+  - inkscape
+  - sketch
+  - pandoc
+
+sublime_version: 3
 
 sublime_packages:
-    'AdvancedNewFile': 'https://github.com/skuroda/Sublime-AdvancedNewFile.git'
-    'Ansible': 'https://github.com/clifford-github/sublime-ansible.git'
-    'ColorPicker': 'https://github.com/weslly/ColorPicker.git'
-    'Git': 'https://github.com/kemayo/sublime-text-git.git'
-    'GitGutter': 'https://github.com/jisaacks/GitGutter.git'
-    'Jinja2': 'https://github.com/mitsuhiko/jinja2-tmbundle'
-    'Mardown Preview': 'https://github.com/revolunet/sublimetext-markdown-preview'
-    'SublimeLinter': 'https://github.com/SublimeLinter/SublimeLinter3.git'
-    'Terminal': 'https://github.com/wbond/sublime_terminal.git'
-    'TypeScript': 'https://github.com/Microsoft/TypeScript-Sublime-Plugin.git'
+  - 'https://github.com/skuroda/Sublime-AdvancedNewFile.git'
+  - 'https://github.com/clifford-github/sublime-ansible.git'
+  - 'https://github.com/weslly/ColorPicker.git'
+  - 'https://github.com/kemayo/sublime-text-git.git'
+  - 'https://github.com/jisaacks/GitGutter.git'
+  - 'https://github.com/mitsuhiko/jinja2-tmbundle'
+  - 'https://github.com/revolunet/sublimetext-markdown-preview'
+  - 'https://github.com/SublimeLinter/SublimeLinter3.git'
+  - 'https://github.com/Microsoft/TypeScript-Sublime-Plugin.git'
 
-# node_10.x, node_8.x or , node_6.x
-node_version: node_8.x
-
-ruby_gems:
-  - fpm
-  - jekyll
+nodejs_version: 8.x
 
 npm_packages:
   - http-server
   - typescript
+  - karma-cli
+  - browserify
+  - webpack
+  - bower
+  - grunt
+  - gulp-cli
+  - less
+
+ruby_gems:
+  - fpm
+  - jekyll
+  - rake
+  - sass
 
 pip2_packages:
   - fabric
-  - jinja2
 
 pip3_packages:
   - pipenv
   - numpy
   - scikit-learn
   - requests
+  - matplotlib
+  - nose
+  - jupyter
+  - beautifulsoup4
+  - Jinja2

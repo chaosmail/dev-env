@@ -1,4 +1,4 @@
 ---
 
-virtualbox_ppa: "deb http://download.virtualbox.org/virtualbox/debian {{ lsb_release }} contrib"
+virtualbox_ppa: "deb http://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }} contrib"
 virtualbox_ppa_key: http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc

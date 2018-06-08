@@ -7,13 +7,7 @@
   failed_when: dropbox_check_deb.rc > 1
   changed_when: dropbox_check_deb.rc == 1
 
-- name: Download dropbox
-  get_url: 
-    url="{{ dropbox_url }}"
-    dest="/home/{{ ansible_env.USER }}/Downloads/{{ dropbox_version }}.deb"
-  when: dropbox_check_deb.rc == 1
-
 - name: Install dropbox
-  apt: deb="/home/{{ ansible_env.USER }}/Downloads/{{ dropbox_version }}.deb"
-  sudo: true
+  apt: deb="{{ dropbox_url }}"
+  become: true
   when: dropbox_check_deb.rc == 1

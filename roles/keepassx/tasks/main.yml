@@ -1,8 +1,0 @@
----
-# Install & Configure KeePassX
-
-- name: Install latest keepassx package
-  apt: pkg="{{ item }}" state=latest force=yes
-  with_items:
-    - keepassx
-  sudo: true

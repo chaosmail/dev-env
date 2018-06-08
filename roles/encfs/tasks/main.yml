@@ -3,15 +3,15 @@
 
 - name: Add encfs repository
   apt_repository: repo="{{ encfs_ppa }}" state=present
-  sudo: true
+
+- name: Add public key
+  apt_key: keyserver="{{ encfs_ppa_keyserver }}" id="{{ encfs_ppa_id }}" state=present
 
 - name: Update package manager
   apt: update_cache=yes
-  sudo: true
 
 - name: Install latest encfs package
   apt: pkg="{{ item }}" state=latest force=yes
   with_items:
     - encfs
     - gnome-encfs-manager
-  sudo: true

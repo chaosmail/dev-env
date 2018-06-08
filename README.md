@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/chaosmail/dev-env.svg?branch=master)](https://travis-ci.org/chaosmail/dev-env)
+
 # Development Environment for Humans
 
 This repository should help you to quickly setup a clean development environment based on Ubuntu 16.04 LTS on your machine.

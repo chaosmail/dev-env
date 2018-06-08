@@ -1,0 +1,27 @@
+---
+sudo: required
+
+language: python
+
+addons:
+  apt:
+    packages:
+      - docker-ce
+
+env:
+  - IMG=geerlingguy/docker-ubuntu1604-ansible
+  - IMG=geerlingguy/docker-ubuntu1804-ansible
+
+services:
+  - docker
+
+before_install:
+  - docker --version
+  - docker pull $IMG
+
+script:
+  - docker run -it -v "$(pwd):/root/"
+      $IMG /bin/sh /root/scripts/test.sh
+
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/

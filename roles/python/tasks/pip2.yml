@@ -1,7 +1,15 @@
 ---
 # Install Python 2 Packages
 
+- name: Update pip2
+  pip: name="pip" state=latest
+  become: true
+
 - name: Install python2 packages with pip2
-  pip: name="{{ item }}" state=present
-  with_items: pip2_packages | default([])
-  sudo: true
+  pip:
+    name: "{{ item.name | default(item) }}"
+    version: "{{ item.version | default(omit) }}"
+    state: present
+    extra_args: "--no-cache-dir"
+  with_items: "{{ pip2_packages | default([]) }}"
+  become: true

@@ -1,9 +1,0 @@
----
-# Configure Nautilus
-
-- name: Install nautilus actions
-  apt: pkg="{{ item }}" state=latest
-  with_items:
-    - nautilus-open-terminal
-    - nautilus-actions
-  sudo: true

@@ -1,5 +1,5 @@
 ---
 
-docker_ppa: "deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ lsb_release }} stable"
+docker_ppa: "deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable"
 docker_ppa_key: https://download.docker.com/linux/ubuntu/gpg
 docker_ppa_id: 0EBFCD88

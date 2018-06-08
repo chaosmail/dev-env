@@ -1,0 +1,23 @@
+---
+# Install & Configure Common Tools
+
+- name: APT update cache
+  apt: update_cache=yes
+  become: true
+
+- name: Create `/usr/share/man/man1` directory (required for Java 8)
+  file:
+    path: /usr/share/man/man1
+    state: directory
+  when:
+    - ansible_distribution == 'Ubuntu'
+    - ansible_distribution_release == 'bionic'
+  become: true
+
+- name: Install common tools
+  apt:
+    pkg: "{{ item.name | default(item) }}{{ '=' + item.version if (item.version | default(False)) else '' }}"
+    state: present
+    force: yes
+  with_items: "{{ apt_packages | default([]) }}"
+  become: true

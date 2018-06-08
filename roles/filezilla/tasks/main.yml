@@ -1,8 +1,0 @@
----
-# Install Filezilla
-
-- name: Install filezilla
-  apt: pkg="{{ item }}" state=latest
-  with_items:
-    - filezilla
-  sudo: true
