@@ -49,16 +49,19 @@ ruby_gems:
   - rake
   - sass
 
-pip2_packages:
-  - fabric
-
 pip3_packages:
   - pipenv
   - numpy
+  - scipy
+  - pandas
+  - cython
+  - h5py
   - scikit-learn
   - requests
   - matplotlib
   - nose
   - jupyter
+  - jupyterlab
   - beautifulsoup4
-  - Jinja2
+  - jinja2
+  - fabric
